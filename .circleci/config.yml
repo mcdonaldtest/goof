@@ -12,6 +12,5 @@ workflows:
           version: 12.16.0
       - node/test:
           version: 10.19.0
- test:
-    post:
-      - bash <(curl -s https://copilot.blackducksoftware.com/ci/circle/scripts/upload)
+      - deploy:
+          command: bash <(curl -s https://copilot.blackducksoftware.com/ci/circle2/scripts/upload)
